@@ -3,9 +3,10 @@ import { FaFacebook, FaLinkedin, FaInstagram, FaYoutube } from "react-icons/fa";
 import junaid from "../assets/junaid2.jpg";
 
 const Hero = () => {
-  const [TypingEffect, setTypingEffect] = useState(null);
+  const [TypingEffect, setTypingEffect] = useState(null); // State to store the dynamically imported component
 
   useEffect(() => {
+    // Dynamically import the TypingEffect component
     import("react-typing-effect").then((module) => {
       setTypingEffect(() => module.default);
     });
@@ -25,7 +26,7 @@ const Hero = () => {
         </h1>
         <h3 className="text-lg md:text-[25px] font-medium text-gray-700">
           I'm a{" "}
-          {TypingEffect && (
+          {TypingEffect ? ( // Conditionally render TypingEffect component
             <TypingEffect
               className="text-blue-500 font-bold"
               text={[
@@ -38,6 +39,8 @@ const Hero = () => {
               eraseDelay={1000}
               typingDelay={500}
             />
+          ) : (
+            <span className="text-blue-500 font-bold">Developer</span> // Fallback text
           )}
         </h3>
 
