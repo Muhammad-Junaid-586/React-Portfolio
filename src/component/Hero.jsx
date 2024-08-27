@@ -1,14 +1,19 @@
-import React from "react";
-// import TypingEffect from "react-typing-effect";
-import TypingEffect from "react-typing-effect";
-
+import React, { useEffect, useState } from "react";
 import { FaFacebook, FaLinkedin, FaInstagram, FaYoutube } from "react-icons/fa";
 import junaid from "../assets/junaid2.jpg";
 
 const Hero = () => {
+  const [TypingEffect, setTypingEffect] = useState(null);
+
+  useEffect(() => {
+    import("react-typing-effect").then((module) => {
+      setTypingEffect(() => module.default);
+    });
+  }, []);
+
   return (
     <div
-      className="flex flex-col md:flex-row md:items-center md:justify-center w-[90%] mx-auto py-24 "
+      className="flex flex-col md:flex-row md:items-center md:justify-center w-[90%] mx-auto py-24"
       id="home"
     >
       <div className="text-left md:w-1/2">
@@ -20,24 +25,24 @@ const Hero = () => {
         </h1>
         <h3 className="text-lg md:text-[25px] font-medium text-gray-700">
           I'm a{" "}
-          <TypingEffect
-            className="text-blue-500 font-bold"
-            text={[
-              "WordPress Developer",
-              "Frontend Developer",
-              "UI/UX Designer",
-            ]}
-            speed={100}
-            eraseSpeed={50}
-            eraseDelay={1000}
-            typingDelay={500}
-          />
+          {TypingEffect && (
+            <TypingEffect
+              className="text-blue-500 font-bold"
+              text={[
+                "WordPress Developer",
+                "Frontend Developer",
+                "UI/UX Designer",
+              ]}
+              speed={100}
+              eraseSpeed={50}
+              eraseDelay={1000}
+              typingDelay={500}
+            />
+          )}
         </h3>
 
-        <div className="flex justify-start my-6 space-x-4  ">
+        <div className="flex justify-start my-6 space-x-4">
           <a
-            className="
-"
             href="https://www.facebook.com"
             target="_blank"
             rel="noopener noreferrer"
@@ -68,7 +73,7 @@ const Hero = () => {
         </div>
 
         <a
-          href="#"
+          href="Muhammad-Junaid-CV.pdf"
           download
           className="inline-block bg-blue-600 text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-blue-700 transition"
         >
