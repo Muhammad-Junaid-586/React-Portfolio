@@ -26,7 +26,7 @@ createRoot(document.getElementById("root")).render(
             path="/projects/javascript"
             element={<JavascriptProjectsPage />}
           />
-          <Route path="/projects/react" element={<ReactProjectsPage />} />
+          <Route path="/projects/reactjs" element={<ReactProjectsPage />} />
           <Route path="/projects/urraan" element={<UrraanProjects />} />
           {/* Add more routes as needed */}
         </Route>

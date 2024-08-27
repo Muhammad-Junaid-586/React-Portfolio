@@ -81,7 +81,7 @@ export const projects = {
     },
   ],
 
-  react: [
+  reactjs: [
     {
       id: 1,
       name: "Youtube Clone",
