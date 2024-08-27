@@ -1,5 +1,7 @@
 import React from "react";
+// import TypingEffect from "react-typing-effect";
 import TypingEffect from "react-typing-effect";
+
 import { FaFacebook, FaLinkedin, FaInstagram, FaYoutube } from "react-icons/fa";
 import junaid from "../assets/junaid2.jpg";
 
