@@ -24,16 +24,19 @@ export const projects = {
       id: 1,
       name: "Facebook Clone",
       image: facebook,
+      link: "https://muhammad-junaid-586.github.io/my-portfolio/all%20projects%20pages/html&css/facebook%20project/facebook.html",
     },
     {
       id: 2,
       name: "Home Landing Page",
       image: home,
+      link: "https://muhammad-junaid-586.github.io/my-portfolio/all%20projects%20pages/html&css/Projects/2ndproject.html",
     },
     {
       id: 3,
       name: "Electronic Store",
       image: electronic,
+      link: "https://muhammad-junaid-586.github.io/my-portfolio/all%20projects%20pages/html&css/ecommerce%20in%20css/code%20for%20eccomerace%20website/index.html",
     },
   ],
 
@@ -42,16 +45,19 @@ export const projects = {
       id: 1,
       name: "Portfolio Website",
       image: portfolio,
+      link: "https://muhammad-junaid-586.github.io/my-portfolio/all%20projects%20pages/Bootstrap%20Projects/Portfolio%20website/index.html",
     },
     {
       id: 2,
       name: "Landing Page Website",
       image: home,
+      link: "https://muhammad-junaid-586.github.io/my-portfolio/all%20projects%20pages/Bootstrap%20Projects/second%20project/index.html",
     },
     {
       id: 3,
       name: "Foodies Website",
       image: foodies,
+      link: "https://muhammad-junaid-586.github.io/my-portfolio/all%20projects%20pages/Bootstrap%20Projects/Foodies%20website/index.html",
     },
   ],
   javascript: [
@@ -59,16 +65,19 @@ export const projects = {
       id: 1,
       name: "Portfolio Website",
       image: pacman,
+      link: "https://muhammad-junaid-586.github.io/my-portfolio/all%20projects%20pages/javascript/pacman%20game/index.html",
     },
     {
       id: 2,
       name: "Product Page",
       image: mathForKids,
+      link: "https://muhammad-junaid-586.github.io/my-portfolio/all%20projects%20pages/javascript/math%20for%20kids/index.html",
     },
     {
       id: 3,
       name: "Calculator",
       image: calculator,
+      link: "https://muhammad-junaid-586.github.io/my-portfolio/all%20projects%20pages/javascript/calculator/index.html",
     },
   ],
 
@@ -77,16 +86,19 @@ export const projects = {
       id: 1,
       name: "Youtube Clone",
       image: youtube,
+      link: "https://youtube-clone-t.netlify.app/",
     },
     {
       id: 2,
       name: "Instagram Clone",
       image: instagram,
+      link: "https://insta-clone-on-react-tailwind.netlify.app/",
     },
     {
       id: 3,
       name: "Online Store",
       image: onlineStore,
+      link: "https://react-online-store-tailwind.netlify.app/",
     },
   ],
 
@@ -95,16 +107,19 @@ export const projects = {
       id: 1,
       name: "CatchUp",
       image: task1,
+      link: "https://muhammad-junaid-586.github.io/my-portfolio/all%20projects%20pages/Urraan%20Task/task1/index.html",
     },
     {
       id: 2,
       name: "Red Cards Form",
       image: task2,
+      link: "https://muhammad-junaid-586.github.io/my-portfolio/all%20projects%20pages/Urraan%20Task/task2/index.html",
     },
     {
       id: 3,
       name: "Keefers Layout",
       image: task1,
+      link: "https://muhammad-junaid-586.github.io/my-portfolio/all%20projects%20pages/Urraan%20Task/task4%20responsive/index.html",
     },
   ],
 
@@ -113,16 +128,19 @@ export const projects = {
       id: 1,
       name: "Red Card Form Validation",
       image: task1,
+      link: "https://muhammad-junaid-586.github.io/my-portfolio/all%20projects%20pages/Urraan%20Task/js%20tasks/form%20validation%20in%20javascript/project/index.html",
     },
     {
       id: 2,
       name: "Random Bubbles Generator",
       image: task2,
+      link: "https://muhammad-junaid-586.github.io/my-portfolio/all%20projects%20pages/Urraan%20Task/js%20tasks/random%20bubble/index.html",
     },
     {
       id: 3,
       name: "Image Slider",
       image: task1,
+      link: "https://muhammad-junaid-586.github.io/my-portfolio/all%20projects%20pages/Urraan%20Task/js%20tasks/slider-project%20completed/index2.html",
     },
   ],
   // Add more categories if needed
