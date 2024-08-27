@@ -50,7 +50,7 @@ const Hero = () => {
       className="flex flex-col md:flex-row md:items-center md:justify-center w-[90%] mx-auto py-24"
       id="home"
     >
-      <div className="text-left md:w-1/2">
+      <div className="text-left md:w-[60%]">
         <h3 className="text-lg md:text-xl font-semibold text-gray-600">
           Hello, It's Me
         </h3>
@@ -101,7 +101,7 @@ const Hero = () => {
         </a>
       </div>
 
-      <div className="md:w-1/2 mt-10 md:mt-0 flex justify-center items-center">
+      <div className="md:w-[40%] mt-10 md:mt-0 flex justify-center items-center">
         <img
           src={junaid}
           alt="Muhammad Junaid"
