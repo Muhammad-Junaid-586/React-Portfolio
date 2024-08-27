@@ -1,16 +1,49 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaFacebook, FaLinkedin, FaInstagram, FaYoutube } from "react-icons/fa";
 import junaid from "../assets/junaid2.jpg";
 
 const Hero = () => {
-  const [TypingEffect, setTypingEffect] = useState(null); // State to store the dynamically imported component
+  const roles = ["WordPress Developer", "Frontend Developer", "UI/UX Designer"]; // List of roles
+  const [displayedText, setDisplayedText] = useState(""); // State to keep track of the text being displayed
+  const [currentRoleIndex, setCurrentRoleIndex] = useState(0); // Index of the current role being typed
+  const [isDeleting, setIsDeleting] = useState(false); // Whether text is being deleted
+  const [loopNum, setLoopNum] = useState(0); // Loop count to manage typing of roles
+  const typingSpeed = 100; // Speed of typing
+  const deletingSpeed = 50; // Speed of deleting
+  const delayAfterComplete = 1000; // Delay after typing a complete word
 
   useEffect(() => {
-    // Dynamically import the TypingEffect component
-    import("react-typing-effect").then((module) => {
-      setTypingEffect(() => module.default);
-    });
-  }, []);
+    const handleTyping = () => {
+      const currentRole = roles[currentRoleIndex]; // Get the current role from the list
+
+      if (isDeleting) {
+        // Deleting characters
+        setDisplayedText(currentRole.substring(0, displayedText.length - 1));
+      } else {
+        // Typing characters
+        setDisplayedText(currentRole.substring(0, displayedText.length + 1));
+      }
+
+      if (!isDeleting && displayedText === currentRole) {
+        // Pause after a complete word is typed
+        setTimeout(() => setIsDeleting(true), delayAfterComplete);
+      } else if (isDeleting && displayedText === "") {
+        // Move to the next role after deleting the current one
+        setIsDeleting(false);
+        setLoopNum(loopNum + 1);
+        setCurrentRoleIndex((currentRoleIndex + 1) % roles.length); // Loop back to the start after the last role
+      }
+    };
+
+    const typingInterval = setInterval(
+      () => {
+        handleTyping();
+      },
+      isDeleting ? deletingSpeed : typingSpeed
+    );
+
+    return () => clearInterval(typingInterval);
+  }, [displayedText, isDeleting]);
 
   return (
     <div
@@ -25,23 +58,7 @@ const Hero = () => {
           Muhammad Junaid
         </h1>
         <h3 className="text-lg md:text-[25px] font-medium text-gray-700">
-          I'm a{" "}
-          {TypingEffect ? ( // Conditionally render TypingEffect component
-            <TypingEffect
-              className="text-blue-500 font-bold"
-              text={[
-                "WordPress Developer",
-                "Frontend Developer",
-                "UI/UX Designer",
-              ]}
-              speed={100}
-              eraseSpeed={50}
-              eraseDelay={1000}
-              typingDelay={500}
-            />
-          ) : (
-            <span className="text-blue-500 font-bold">Developer</span> // Fallback text
-          )}
+          I'm a <span className="text-blue-500 font-bold">{displayedText}</span>
         </h3>
 
         <div className="flex justify-start my-6 space-x-4">
