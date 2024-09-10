@@ -1,37 +1,34 @@
 import React, { useState, useEffect } from "react";
 import { FaFacebook, FaLinkedin, FaInstagram, FaYoutube } from "react-icons/fa";
 import junaid from "../assets/junaid2.jpg";
+import junaidCv from "../assets/Muhammad-Junaid-CV.pdf"; // Correct import of the PDF file
 
 const Hero = () => {
-  const roles = ["WordPress Developer", "Frontend Developer", "UI/UX Designer"]; // List of roles
-  const [displayedText, setDisplayedText] = useState(""); // State to keep track of the text being displayed
-  const [currentRoleIndex, setCurrentRoleIndex] = useState(0); // Index of the current role being typed
-  const [isDeleting, setIsDeleting] = useState(false); // Whether text is being deleted
-  const [loopNum, setLoopNum] = useState(0); // Loop count to manage typing of roles
-  const typingSpeed = 100; // Speed of typing
-  const deletingSpeed = 50; // Speed of deleting
-  const delayAfterComplete = 1000; // Delay after typing a complete word
+  const roles = ["WordPress Developer", "Frontend Developer", "UI/UX Designer"];
+  const [displayedText, setDisplayedText] = useState("");
+  const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [loopNum, setLoopNum] = useState(0);
+  const typingSpeed = 100;
+  const deletingSpeed = 50;
+  const delayAfterComplete = 1000;
 
   useEffect(() => {
     const handleTyping = () => {
-      const currentRole = roles[currentRoleIndex]; // Get the current role from the list
+      const currentRole = roles[currentRoleIndex];
 
       if (isDeleting) {
-        // Deleting characters
         setDisplayedText(currentRole.substring(0, displayedText.length - 1));
       } else {
-        // Typing characters
         setDisplayedText(currentRole.substring(0, displayedText.length + 1));
       }
 
       if (!isDeleting && displayedText === currentRole) {
-        // Pause after a complete word is typed
         setTimeout(() => setIsDeleting(true), delayAfterComplete);
       } else if (isDeleting && displayedText === "") {
-        // Move to the next role after deleting the current one
         setIsDeleting(false);
         setLoopNum(loopNum + 1);
-        setCurrentRoleIndex((currentRoleIndex + 1) % roles.length); // Loop back to the start after the last role
+        setCurrentRoleIndex((currentRoleIndex + 1) % roles.length);
       }
     };
 
@@ -92,9 +89,10 @@ const Hero = () => {
           </a>
         </div>
 
+        {/* Download CV Button */}
         <a
-          href="Muhammad-Junaid-CV.pdf"
-          download
+          href={junaidCv} // Link to the imported PDF file
+          download={junaidCv} // This ensures the file is downloaded with the correct name
           className="inline-block bg-blue-600 text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-blue-700 transition"
         >
           Download CV

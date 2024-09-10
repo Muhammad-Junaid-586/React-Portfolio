@@ -27,8 +27,8 @@ const Header = () => {
     <header className="fixed top-0 left-0 w-full  py-3 flex items-center justify-between bg-white z-10 transition-shadow duration-300">
       {/* Logo - Updated to Link component */}
       <div className="w-[90%] mx-auto flex justify-between items-center">
-        <Link to="/" className="text-2xl font-bold">
-          NE<span className=" text-blue-600">LCA</span>
+        <Link to="/" className="text-2xl font-bold font-pacifico">
+          JUN<span className=" text-blue-600">AID</span>
         </Link>
 
         {/* Mobile Menu Icon */}
