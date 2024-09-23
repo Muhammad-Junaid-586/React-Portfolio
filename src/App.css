@@ -8,3 +8,6 @@ body {
   background-color: #1f242d;
   color: #fff;
 } */
+body {
+  overflow-x: hidden;
+}

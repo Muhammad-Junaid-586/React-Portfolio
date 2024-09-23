@@ -1,15 +1,30 @@
 import React from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const ContactUs = () => {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
   return (
     <section className="p-6 md:p-12 w-full bg-gray-100" id="contact">
       {/* Heading */}
-      <h2 className="text-4xl font-black text-center mb-8">
+      <h2
+        className="text-4xl font-black text-center mb-8"
+        data-aos="fade-down-right"
+      >
         Contact <span className="text-blue-500">Us</span>
       </h2>
       {/* Contact Form */}
-      <div className="max-w-4xl mx-auto bg-gray-100 p-8 rounded-lg shadow-md">
-        <form className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <div
+        className="max-w-4xl mx-auto bg-gray-100 p-8 rounded-lg shadow-md"
+        data-aos="fade-down-right"
+      >
+        <form
+          className="grid grid-cols-1 sm:grid-cols-2 gap-6"
+          data-aos="flip-left"
+        >
           {/* Name */}
           <div className="sm:col-span-1">
             <input

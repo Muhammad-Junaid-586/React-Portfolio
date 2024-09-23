@@ -1,6 +1,9 @@
 import React from "react";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css"; // Import the styles
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const skills = [
   { name: "HTML", percentage: 90, color: "#F16529" },
@@ -12,9 +15,15 @@ const skills = [
 ];
 
 const Skills = () => {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
   return (
     <section className="p-6 md:p-12 my-6 w-full bg-gray-100" id="skills">
-      <h2 className="text-4xl font-bold text-center mb-8">
+      <h2
+        className="text-4xl font-bold text-center mb-8"
+        data-aos="zoom-in-down"
+      >
         Sk<span className="text-blue-500">ill</span>s
       </h2>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
@@ -22,6 +31,7 @@ const Skills = () => {
           <div
             key={index}
             className="flex flex-col items-center justify-center"
+            data-aos="zoom-in-left"
           >
             <div className="w-[145px] h-[145px]">
               <CircularProgressbar

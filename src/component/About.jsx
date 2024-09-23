@@ -1,7 +1,13 @@
 import React from "react";
-import aboutImage from "../assets/junaid1.jpg"; // Make sure to replace with the actual image path
+import aboutImage from "../assets/junaid1.jpg";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const About = () => {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
   return (
     <section
       className="flex flex-col-reverse md:flex-row  justify-between py-6 md:py-12 w-[90%] mx-auto gap-5"
@@ -10,7 +16,10 @@ const About = () => {
       {/* Text Content */}
 
       {/* Image */}
-      <div className="md:w-1/2 flex justify-center h-[350px]">
+      <div
+        className="md:w-1/2 flex justify-center h-[350px]"
+        data-aos="fade-down-right"
+      >
         <img
           src={aboutImage}
           alt="About Me"
@@ -18,7 +27,10 @@ const About = () => {
         />
       </div>
 
-      <div className="md:w-1/2 flex flex-col space-y-4 md:space-y-6 text-left">
+      <div
+        className="md:w-1/2 flex flex-col space-y-4 md:space-y-6 text-left"
+        data-aos="fade-down-left"
+      >
         <h2 className="text-4xl font-bold">
           About <span className="text-blue-500">Me</span>
         </h2>

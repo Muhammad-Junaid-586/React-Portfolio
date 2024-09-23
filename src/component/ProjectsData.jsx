@@ -17,6 +17,9 @@ import instagram from "../assets/instagram.jpg";
 import onlineStore from "../assets/onlineStore.jpg";
 import task1 from "../assets/task1.jpg";
 import task2 from "../assets/task2.jpg";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 // Project data categorized by type
 export const projects = {
   html: [
@@ -156,6 +159,9 @@ export const ProjectSection = ({ category, projects, showSeeAll = true }) => {
       ? "URRAAN JS"
       : category.toUpperCase();
 
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
   return (
     <>
       {/* Full-width horizontal line */}
@@ -163,11 +169,17 @@ export const ProjectSection = ({ category, projects, showSeeAll = true }) => {
         <hr className="h-[10px] bg-blue-500 border-none rounded-full" />
       </div>
       {/* Sub-heading */}
-      <h3 className="text-4xl font-bold text-center text-gray-700 my-6">
+      <h3
+        className="text-4xl font-bold text-center text-gray-700 my-6"
+        data-aos="zoom-out-left"
+      >
         {displayCategory} <span className="text-blue-500">PROJECTS</span>
       </h3>
       {/* Projects Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8 pt-4">
+      <div
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8 pt-4"
+        data-aos="zoom-in-down"
+      >
         {projects.map((project) => (
           <div
             key={project.id}
@@ -201,7 +213,7 @@ export const ProjectSection = ({ category, projects, showSeeAll = true }) => {
       </div>
       {/* See All Projects Button */}
       {showSeeAll && (
-        <div className="text-center  my-12">
+        <div className="text-center  my-12" data-aos="flip-down">
           <Link
             to={`/projects/${category}`}
             className="px-6 py-3 bg-blue-500 text-white font-bold rounded-full shadow-md hover:bg-blue-600 transition duration-300"

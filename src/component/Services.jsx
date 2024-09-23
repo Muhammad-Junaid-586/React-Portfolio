@@ -1,5 +1,8 @@
 import React from "react";
 import { FaCode, FaPaintBrush, FaMobileAlt } from "react-icons/fa"; // Example icons
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const services = [
   {
@@ -26,6 +29,9 @@ const services = [
 ];
 
 const Services = () => {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
   return (
     <section className="py-6 md:py-12 w-[90%] mx-auto" id="services">
       <h2 className="text-4xl font-bold text-center mb-8">
@@ -36,6 +42,7 @@ const Services = () => {
           <div
             key={index}
             className="flex flex-col items-center p-6 bg-gray-100 rounded-lg shadow-md text-center"
+            data-aos="flip-left"
           >
             <div className="mb-4">{service.icon}</div>
             <h3 className="text-2xl font-semibold text-gray-800 mb-2">

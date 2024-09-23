@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { FaFacebook, FaLinkedin, FaInstagram, FaYoutube } from "react-icons/fa";
 import junaid from "../assets/junaid2.jpg";
 import junaidCv from "../assets/Muhammad-Junaid-CV.pdf"; // Correct import of the PDF file
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Hero = () => {
   const roles = ["WordPress Developer", "Frontend Developer", "UI/UX Designer"];
@@ -42,12 +44,16 @@ const Hero = () => {
     return () => clearInterval(typingInterval);
   }, [displayedText, isDeleting]);
 
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
+
   return (
     <div
       className="flex flex-col md:flex-row md:items-center md:justify-center w-[90%] mx-auto py-24"
       id="home"
     >
-      <div className="text-left md:w-[60%]">
+      <div className="text-left md:w-[60%]" data-aos="fade-up">
         <h3 className="text-lg md:text-xl font-semibold text-gray-600">
           Hello, It's Me
         </h3>
@@ -99,7 +105,10 @@ const Hero = () => {
         </a>
       </div>
 
-      <div className="md:w-[40%] mt-10 md:mt-0 flex justify-center items-center">
+      <div
+        className="md:w-[40%] mt-10 md:mt-0 flex justify-center items-center"
+        data-aos="fade-up-left"
+      >
         <img
           src={junaid}
           alt="Muhammad Junaid"
