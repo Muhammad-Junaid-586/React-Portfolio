@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { FaFacebook, FaLinkedin, FaInstagram, FaYoutube } from "react-icons/fa";
 import junaid from "../assets/junaid2.jpg";
-import junaidCv from "../assets/Muhammad-Junaid-CV.pdf"; // Correct import of the PDF file
+// import junaidCv from "../assets/Muhammad-Junaid-CV.pdf"; // Correct import of the PDF file
+import junaidCv from "../assets/junaid-8-months-exp.pdf";
 import Aos from "aos";
 import "aos/dist/aos.css";
 

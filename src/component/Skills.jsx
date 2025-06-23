@@ -12,6 +12,7 @@ const skills = [
   { name: "Bootstrap", percentage: 70, color: "#563d7c" },
   { name: "Tailwind", percentage: 85, color: "#06B6D4" },
   { name: "React", percentage: 80, color: "#61DBFB" },
+  { name: "Nextjs", percentage: 70, color: "#F7DF1E" },
 ];
 
 const Skills = () => {

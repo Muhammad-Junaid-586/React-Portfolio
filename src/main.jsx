@@ -9,6 +9,7 @@ import CssProjectsPage from "./component/BootstrapProjectsPage.jsx";
 import JavascriptProjectsPage from "./component/JavascriptProjectsPage.jsx";
 import BootstrapProjectsPage from "./component/BootstrapProjectsPage.jsx";
 import ReactProjectsPage from "./component/ReactProjectsPage.jsx";
+import NextjsProjectsPage from "./component/NextjsProjectsPage.jsx";
 import UrraanProjects from "./component/UrraanProjects.jsx";
 
 createRoot(document.getElementById("root")).render(
@@ -27,6 +28,10 @@ createRoot(document.getElementById("root")).render(
             element={<JavascriptProjectsPage />}
           />
           <Route path="/projects/reactjs" element={<ReactProjectsPage />} />
+          <Route
+            path="/projects/nextProjects"
+            element={<NextjsProjectsPage />}
+          />
           <Route path="/projects/urraan" element={<UrraanProjects />} />
           {/* Add more routes as needed */}
         </Route>

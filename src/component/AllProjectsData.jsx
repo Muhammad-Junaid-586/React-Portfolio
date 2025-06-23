@@ -294,6 +294,30 @@ export const reactProjects = [
   },
 ];
 
+export const nextProjects = [
+  // Define JavaScript projects here
+  {
+    id: 1,
+    name: "Food Landing Page",
+    image: foodies,
+    link: "https://food-nextjs-one.vercel.app/",
+  },
+
+  {
+    id: 5,
+    name: "Comming Soon",
+    image: comingSoonHtml,
+    link: "#",
+  },
+
+  {
+    id: 7,
+    name: "IN PROGRESS",
+    image: comingSoonHtml,
+    link: "#",
+  },
+];
+
 export const urraan = [
   {
     id: 1,

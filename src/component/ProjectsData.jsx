@@ -17,6 +17,7 @@ import instagram from "../assets/instagram.jpg";
 import onlineStore from "../assets/onlineStore.jpg";
 import task1 from "../assets/task1.jpg";
 import task2 from "../assets/task2.jpg";
+import comingSoonHtml from "../assets/html.jpeg";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
@@ -102,6 +103,30 @@ export const projects = {
       name: "Online Store",
       image: onlineStore,
       link: "https://react-online-store-tailwind.netlify.app/",
+    },
+  ],
+
+  nextProjects: [
+    // Define JavaScript projects here
+    {
+      id: 1,
+      name: "Food Landing Page",
+      image: foodies,
+      link: "https://food-nextjs-one.vercel.app/",
+    },
+
+    {
+      id: 2,
+      name: "Comming Soon",
+      image: comingSoonHtml,
+      link: "#",
+    },
+
+    {
+      id: 3,
+      name: "IN PROGRESS",
+      image: comingSoonHtml,
+      link: "#",
     },
   ],
 
