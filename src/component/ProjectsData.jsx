@@ -117,16 +117,16 @@ export const projects = {
 
     {
       id: 2,
-      name: "Comming Soon",
-      image: comingSoonHtml,
-      link: "#",
+      name: "Portfolio",
+      image: portfolio,
+      link: "https://portfolio-nextjs-ruddy-theta.vercel.app/",
     },
 
     {
       id: 3,
-      name: "IN PROGRESS",
-      image: comingSoonHtml,
-      link: "#",
+      name: "Blog App",
+      image: task2,
+      link: "https://next-blog-app-delta-tan.vercel.app/",
     },
   ],
 

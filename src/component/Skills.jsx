@@ -13,6 +13,8 @@ const skills = [
   { name: "Tailwind", percentage: 85, color: "#06B6D4" },
   { name: "React", percentage: 80, color: "#61DBFB" },
   { name: "Nextjs", percentage: 70, color: "#F7DF1E" },
+  { name: "Node.js", percentage: 60, color: "#87DF1E" },
+  { name: "MongoDB", percentage: 50, color: "#563d7c" },
 ];
 
 const Skills = () => {
@@ -27,7 +29,7 @@ const Skills = () => {
       >
         Sk<span className="text-blue-500">ill</span>s
       </h2>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+      <div className="grid grid-cols-2 md:grid-cols-3 justify-center  lg:grid-cols-6 gap-6">
         {skills.map((skill, index) => (
           <div
             key={index}

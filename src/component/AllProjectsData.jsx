@@ -304,17 +304,17 @@ export const nextProjects = [
   },
 
   {
-    id: 5,
-    name: "Comming Soon",
-    image: comingSoonHtml,
-    link: "#",
+    id: 2,
+    name: "Portfolio",
+    image: portfolio,
+    link: "https://portfolio-nextjs-ruddy-theta.vercel.app/",
   },
 
   {
-    id: 7,
-    name: "IN PROGRESS",
-    image: comingSoonHtml,
-    link: "#",
+    id: 3,
+    name: "Blog App",
+    image: applandingPage,
+    link: "https://next-blog-app-delta-tan.vercel.app/",
   },
 ];
 
